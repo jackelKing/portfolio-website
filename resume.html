@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Resume — Prem Raga</title>
+
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --muted:#667085;
+    --accent:#0f1724;
+    --primary:#0b5fff;
+    --card:#fbfdff;
+        color: var(--accent);
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:var(--bg);}
+  .page {
+    max-width: 900px;
+    margin: 28px auto;
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(10,15,25,0.06);
+  }
+
+  .header{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    margin-bottom:12px;
+  }
+  .avatar{
+    width:88px;
+    height:88px;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--primary),#5cc1ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:700;
+    font-size:20px;
+    flex-shrink:0;
+  }
+  .name-block h1{margin:0;font-size:24px;letter-spacing:0.2px}
+  .name-block p{margin:4px 0 0 0;font-size:14px}
+
+  /* Layout */
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr 320px;
+    gap:24px;
+    margin-top:18px;
+  }
+
+  .section{margin-bottom:16px}
+  .section h2{font-size:15px;margin:0 0 8px 0;color:var(--primary);font-weight:600}
+  .summary{line-height:1.5}
+  .work .item{margin-bottom:12px}
+  .item .title{font-weight:600}
+  .item .meta{font-size:13px;color:var(--muted);margin-top:4px}
+  .bullets{margin:8px 0 0 16px;color:var(--muted);line-height:1.45}
+
+  .side{
+    background:linear-gradient(180deg,#fbfdff,#f6fbff);
+    padding:14px;border-radius:10px;border:1px solid rgba(11,95,255,0.06);
+    height:100%;
+  }
+  .side h3{margin:0 0 8px 0;font-size:13px;color:var(--primary)}
+  .meta-row{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:8px}
+  .skill{margin-bottom:10px}
+  .skill .bar{height:8px;background:#e9f0ff;border-radius:8px;overflow:hidden}
+  .skill .fill{height:100%;background:linear-gradient(90deg,var(--primary),#5cc1ff);width:70%}
+
+  .footnote{font-size:12px;color:var(--muted);margin-top:16px;text-align:center}
+
+  @media (max-width:900px){
+    .grid{grid-template-columns:1fr; }
+    .side{order:2}
+  }
+
+  @media print{
+    body{background:white}
+    .page{box-shadow:none;margin:0;border-radius:0;padding:18mm}
+    a::after{content: " (" attr(href) ")";}
+  }
+</style>
+</head>
+<body>
+  <div class="page" role="document">
+    <header class="header" aria-label="Resume header">
+      <div class="avatar" aria-hidden="true">PR</div>
+      <div class="name-block">
+        <h1>Prem Raga</h1>
+        <p>Computer Science • Problem Solver • Machine Learning & Web Dev</p>
+        <p style="margin-top:8px;font-size:13px;color:var(--muted)">
+          <strong>Email:</strong> <a href="mailto:prem@example.com">prem@example.com</a> •
+          <strong>Phone:</strong> +91 98765 43210 •
+          <a href="https://www.linkedin.com/in/prem-raga-707a37339" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Left / main -->
+      <main>
+        <section class="section summary" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Summary</h2>
+          <p>Results-driven software engineer with strong foundations in algorithms, machine learning, and full-stack web development. Solved 320+ LeetCode problems and delivered multiple projects using Python and JavaScript. Seeking cloud-focused roles with emphasis on scalable systems and ML.</p>
+        </section>
+
+        <section class="section work" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experience</h2>
+
+          <div class="item">
+            <div class="title">ML Intern — Example Company</div>
+            <div class="meta">May 2024 — Aug 2024 • Bengaluru</div>
+            <ul class="bullets">
+              <li>Built a CNN+RNN ensemble model for structured classification reaching X% accuracy.</li>
+              <li>Designed data-cleaning pipelines; avoided pretrained models as required.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="title">Software Engineer Intern — Another Company</div>
+            <div class="meta">Jun 2023 — Sep 2023 • Remote</div>
+            <ul class="bullets">
+              <li>Implemented REST APIs and frontend features, improved response times by 30%.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section projects" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Selected Projects</h2>
+          <div class="item">
+            <div class="title">FileCleanser — Intelligent file parser</div>
+            <div class="meta">Python • LLM • Streamlit</div>
+            <p class="bullets">Created an LLM agent that parses PDFs, DOCX and supports semantic search and chat.</p>
+          </div>
+
+          <div class="item">
+            <div class="title">Movie Recommender (C++)</div>
+            <div class="meta">C++ • Weighted Cosine Similarity</div>
+            <p class="bullets">Converted a rule-based recommender into a ML model and measured training/testing accuracy.</p>
+          </div>
+        </section>
+
+        <section class="section education" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <div class="item">
+            <div class="title">B.Tech, Computer Science — RV Institute of Technology and Management</div>
+            <div class="meta">Expected 2027</div>
+          </div>
+          <div class="item">
+            <div class="title">B.Sc — IIT Madras</div>
+            <div class="meta">Expected 2027</div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Right / side -->
+      <aside class="side" aria-label="Sidebar">
+        <section class="skill-section">
+          <h3>Skills</h3>
+          <div class="meta-row">Python · JavaScript · C++ · SQL · Git</div>
+          <div class="skill"><div style="display:flex;justify-content:space-between;font-size:13px"><span>Machine Learning</span><span>80%</span></div>
+            <div class="bar"><div class="fill" style="width:80%"></div></div>
+          </div>
+          <div class="skill"><div style="display:flex;justify-content:space-between;font-size:13px"><span>Algorithms & DS</span><span>85%</span></div>
+            <div class="bar"><div class="fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill"><div style="display:flex;justify-content:space-between;font-size:13px"><span>Web Dev</span><span>75%</span></div>
+            <div class="bar"><div class="fill" style="width:75%"></div></div>
+          </div>
+        </section>
+
+        <section style="margin-top:14px">
+          <h3>Certifications</h3>
+          <div class="meta-row">LLMs · Generative AI · AWS Cloud Practitioner (in progress)</div>
+        </section>
+
+        <section style="margin-top:14px">
+          <h3>Contact</h3>
+          <div class="meta-row"><strong>Email:</strong> prem@example.com</div>
+          <div class="meta-row"><strong>LinkedIn:</strong> linkedin.com/in/prem-raga-707a37339</div>
+        </section>
+      </aside>
+    </div>
+
+    <div class="footnote">Tips: keep resume to 1 page for early career. Use bullet points with quantifiable impact. Save as PDF for applications.</div>
+  </div>
+</body>
+</html>
